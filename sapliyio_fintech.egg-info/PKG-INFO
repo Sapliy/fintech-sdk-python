@@ -1,0 +1,44 @@
+Metadata-Version: 2.4
+Name: sapliyio-fintech
+Version: 0.0.1
+Summary: Official Sapliy Fintech Ecosystem SDK for Python
+Author-email: Sapliy <dev@sapliy.com>
+Project-URL: Homepage, https://github.com/Sapliy/fintech-ecosystem
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.25.0
+Dynamic: license-file
+
+# Sapliy Fintech Python SDK
+
+Official Python SDK for the Sapliy Fintech Ecosystem.
+
+## Installation
+
+```bash
+pip install sapliy-fintech
+```
+
+## Usage
+
+```python
+from sapliy_fintech import FintechClient
+
+# Initialize the client
+client = FintechClient(api_key="your_api_key")
+
+# Example: Record a transaction
+response = client.ledger.record_transaction(
+    account_id="acc_123",
+    amount=1000,
+    currency="USD",
+    description="Coffee",
+    reference_id="ref_456"
+)
+
+print(response)
+```

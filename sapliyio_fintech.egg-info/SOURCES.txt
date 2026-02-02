@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+sapliyio_fintech/__init__.py
+sapliyio_fintech.egg-info/PKG-INFO
+sapliyio_fintech.egg-info/SOURCES.txt
+sapliyio_fintech.egg-info/dependency_links.txt
+sapliyio_fintech.egg-info/requires.txt
+sapliyio_fintech.egg-info/top_level.txt
