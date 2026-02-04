@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.auth_remove_team_member_response import AuthRemoveTeamMemberResponse
+from sapliy_fintech.generated.models.auth_remove_team_member_response import AuthRemoveTeamMemberResponse
 
 # TODO update the JSON string below
 json = "{}"

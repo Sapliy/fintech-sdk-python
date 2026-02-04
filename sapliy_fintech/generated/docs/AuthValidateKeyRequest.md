@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.auth_validate_key_request import AuthValidateKeyRequest
+from sapliy_fintech.generated.models.auth_validate_key_request import AuthValidateKeyRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -10,11 +10,13 @@ Name | Type | Description | Notes
 **currency** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **reference_id** | **str** |  | [optional] 
+**zone_id** | **str** |  | [optional] 
+**mode** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from sapliy_fintech.models.ledger_record_transaction_request import LedgerRecordTransactionRequest
+from sapliy_fintech.generated.models.ledger_record_transaction_request import LedgerRecordTransactionRequest
 
 # TODO update the JSON string below
 json = "{}"

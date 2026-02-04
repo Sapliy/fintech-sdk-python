@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.payment_service_confirm_payment_intent_body import PaymentServiceConfirmPaymentIntentBody
+from sapliy_fintech.generated.models.payment_service_confirm_payment_intent_body import PaymentServiceConfirmPaymentIntentBody
 
 # TODO update the JSON string below
 json = "{}"

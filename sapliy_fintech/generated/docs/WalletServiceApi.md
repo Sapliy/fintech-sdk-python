@@ -1,4 +1,4 @@
-# sapliy_fintech.WalletServiceApi
+# sapliy_fintech.generated.WalletServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,24 +17,24 @@ Method | HTTP request | Description
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.wallet_create_wallet_request import WalletCreateWalletRequest
-from sapliy_fintech.models.wallet_wallet import WalletWallet
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.wallet_create_wallet_request import WalletCreateWalletRequest
+from sapliy_fintech.generated.models.wallet_wallet import WalletWallet
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.WalletServiceApi(api_client)
-    body = sapliy_fintech.WalletCreateWalletRequest() # WalletCreateWalletRequest | 
+    api_instance = sapliy_fintech.generated.WalletServiceApi(api_client)
+    body = sapliy_fintech.generated.WalletCreateWalletRequest() # WalletCreateWalletRequest | 
 
     try:
         api_response = api_instance.wallet_service_create_wallet(body)
@@ -82,22 +82,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.wallet_wallet import WalletWallet
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.wallet_wallet import WalletWallet
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.WalletServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.WalletServiceApi(api_client)
     user_id = 'user_id_example' # str | 
 
     try:
@@ -146,24 +146,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.wallet_top_up_request import WalletTopUpRequest
-from sapliy_fintech.models.wallet_transaction_response import WalletTransactionResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.wallet_top_up_request import WalletTopUpRequest
+from sapliy_fintech.generated.models.wallet_transaction_response import WalletTransactionResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.WalletServiceApi(api_client)
-    body = sapliy_fintech.WalletTopUpRequest() # WalletTopUpRequest | 
+    api_instance = sapliy_fintech.generated.WalletServiceApi(api_client)
+    body = sapliy_fintech.generated.WalletTopUpRequest() # WalletTopUpRequest | 
 
     try:
         api_response = api_instance.wallet_service_top_up(body)
@@ -211,24 +211,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.wallet_transaction_response import WalletTransactionResponse
-from sapliy_fintech.models.wallet_transfer_request import WalletTransferRequest
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.wallet_transaction_response import WalletTransactionResponse
+from sapliy_fintech.generated.models.wallet_transfer_request import WalletTransferRequest
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.WalletServiceApi(api_client)
-    body = sapliy_fintech.WalletTransferRequest() # WalletTransferRequest | 
+    api_instance = sapliy_fintech.generated.WalletServiceApi(api_client)
+    body = sapliy_fintech.generated.WalletTransferRequest() # WalletTransferRequest | 
 
     try:
         api_response = api_instance.wallet_service_transfer(body)

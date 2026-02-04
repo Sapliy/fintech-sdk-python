@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.billing_create_subscription_request import BillingCreateSubscriptionRequest
+from sapliy_fintech.generated.models.billing_create_subscription_request import BillingCreateSubscriptionRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.wallet_top_up_request import WalletTopUpRequest
+from sapliy_fintech.generated.models.wallet_top_up_request import WalletTopUpRequest
 
 # TODO update the JSON string below
 json = "{}"

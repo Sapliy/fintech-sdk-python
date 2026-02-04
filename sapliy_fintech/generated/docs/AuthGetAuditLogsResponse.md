@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.auth_get_audit_logs_response import AuthGetAuditLogsResponse
+from sapliy_fintech.generated.models.auth_get_audit_logs_response import AuthGetAuditLogsResponse
 
 # TODO update the JSON string below
 json = "{}"

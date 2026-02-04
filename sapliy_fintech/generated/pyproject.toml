@@ -1,5 +1,5 @@
 [project]
-name = "sapliy_fintech"
+name = "sapliy_fintech.generated"
 version = "1.0.0"
 description = "proto/payments/payments.proto"
 authors = [
@@ -40,7 +40,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "sapliy_fintech",
+  "sapliy_fintech.generated",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -78,7 +78,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "sapliy_fintech.configuration",
+  "sapliy_fintech.generated.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true

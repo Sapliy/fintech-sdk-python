@@ -1,4 +1,4 @@
-# sapliy_fintech.BillingServiceApi
+# sapliy_fintech.generated.BillingServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,22 +17,22 @@ Method | HTTP request | Description
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.billing_subscription import BillingSubscription
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.billing_subscription import BillingSubscription
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.BillingServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.BillingServiceApi(api_client)
     id = 'id_example' # str | 
     body = None # object | 
 
@@ -83,24 +83,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.billing_create_subscription_request import BillingCreateSubscriptionRequest
-from sapliy_fintech.models.billing_subscription import BillingSubscription
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.billing_create_subscription_request import BillingCreateSubscriptionRequest
+from sapliy_fintech.generated.models.billing_subscription import BillingSubscription
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.BillingServiceApi(api_client)
-    body = sapliy_fintech.BillingCreateSubscriptionRequest() # BillingCreateSubscriptionRequest | 
+    api_instance = sapliy_fintech.generated.BillingServiceApi(api_client)
+    body = sapliy_fintech.generated.BillingCreateSubscriptionRequest() # BillingCreateSubscriptionRequest | 
 
     try:
         api_response = api_instance.billing_service_create_subscription(body)
@@ -148,22 +148,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.billing_subscription import BillingSubscription
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.billing_subscription import BillingSubscription
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.BillingServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.BillingServiceApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -212,22 +212,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.billing_list_subscriptions_response import BillingListSubscriptionsResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.billing_list_subscriptions_response import BillingListSubscriptionsResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.BillingServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.BillingServiceApi(api_client)
     user_id = 'user_id_example' # str |  (optional)
     org_id = 'org_id_example' # str |  (optional)
     limit = 56 # int |  (optional)

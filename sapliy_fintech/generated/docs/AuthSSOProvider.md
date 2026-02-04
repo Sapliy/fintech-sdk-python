@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.auth_sso_provider import AuthSSOProvider
+from sapliy_fintech.generated.models.auth_sso_provider import AuthSSOProvider
 
 # TODO update the JSON string below
 json = "{}"

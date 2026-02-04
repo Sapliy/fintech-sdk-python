@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.rpc_status import RpcStatus
+from sapliy_fintech.generated.models.rpc_status import RpcStatus
 
 # TODO update the JSON string below
 json = "{}"

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.payments_payment_intent import PaymentsPaymentIntent
+from sapliy_fintech.generated.models.payments_payment_intent import PaymentsPaymentIntent
 
 # TODO update the JSON string below
 json = "{}"

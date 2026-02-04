@@ -1,4 +1,4 @@
-# sapliy_fintech.AuthServiceApi
+# sapliy_fintech.generated.AuthServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,24 +22,24 @@ Method | HTTP request | Description
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_add_team_member_request import AuthAddTeamMemberRequest
-from sapliy_fintech.models.auth_membership import AuthMembership
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_add_team_member_request import AuthAddTeamMemberRequest
+from sapliy_fintech.generated.models.auth_membership import AuthMembership
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
-    body = sapliy_fintech.AuthAddTeamMemberRequest() # AuthAddTeamMemberRequest | 
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
+    body = sapliy_fintech.generated.AuthAddTeamMemberRequest() # AuthAddTeamMemberRequest | 
 
     try:
         api_response = api_instance.auth_service_add_team_member(body)
@@ -87,24 +87,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_create_sso_provider_request import AuthCreateSSOProviderRequest
-from sapliy_fintech.models.auth_sso_provider import AuthSSOProvider
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_create_sso_provider_request import AuthCreateSSOProviderRequest
+from sapliy_fintech.generated.models.auth_sso_provider import AuthSSOProvider
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
-    body = sapliy_fintech.AuthCreateSSOProviderRequest() # AuthCreateSSOProviderRequest | 
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
+    body = sapliy_fintech.generated.AuthCreateSSOProviderRequest() # AuthCreateSSOProviderRequest | 
 
     try:
         api_response = api_instance.auth_service_create_sso_provider(body)
@@ -152,22 +152,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_get_audit_logs_response import AuthGetAuditLogsResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_get_audit_logs_response import AuthGetAuditLogsResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
     org_id = 'org_id_example' # str |  (optional)
     limit = 56 # int |  (optional)
     offset = 56 # int |  (optional)
@@ -222,22 +222,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_sso_provider import AuthSSOProvider
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_sso_provider import AuthSSOProvider
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -286,24 +286,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_initiate_sso_request import AuthInitiateSSORequest
-from sapliy_fintech.models.auth_initiate_sso_response import AuthInitiateSSOResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_initiate_sso_request import AuthInitiateSSORequest
+from sapliy_fintech.generated.models.auth_initiate_sso_response import AuthInitiateSSOResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
-    body = sapliy_fintech.AuthInitiateSSORequest() # AuthInitiateSSORequest | 
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
+    body = sapliy_fintech.generated.AuthInitiateSSORequest() # AuthInitiateSSORequest | 
 
     try:
         api_response = api_instance.auth_service_initiate_sso(body)
@@ -351,22 +351,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_list_team_members_response import AuthListTeamMembersResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_list_team_members_response import AuthListTeamMembersResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
     org_id = 'org_id_example' # str | 
 
     try:
@@ -415,22 +415,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_remove_team_member_response import AuthRemoveTeamMemberResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_remove_team_member_response import AuthRemoveTeamMemberResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
     org_id = 'org_id_example' # str |  (optional)
     user_id = 'user_id_example' # str |  (optional)
 
@@ -481,24 +481,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_validate_key_request import AuthValidateKeyRequest
-from sapliy_fintech.models.auth_validate_key_response import AuthValidateKeyResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_validate_key_request import AuthValidateKeyRequest
+from sapliy_fintech.generated.models.auth_validate_key_response import AuthValidateKeyResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
-    body = sapliy_fintech.AuthValidateKeyRequest() # AuthValidateKeyRequest | 
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
+    body = sapliy_fintech.generated.AuthValidateKeyRequest() # AuthValidateKeyRequest | 
 
     try:
         api_response = api_instance.auth_service_validate_key(body)
@@ -546,24 +546,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.auth_validate_token_request import AuthValidateTokenRequest
-from sapliy_fintech.models.auth_validate_token_response import AuthValidateTokenResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.auth_validate_token_request import AuthValidateTokenRequest
+from sapliy_fintech.generated.models.auth_validate_token_response import AuthValidateTokenResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.AuthServiceApi(api_client)
-    body = sapliy_fintech.AuthValidateTokenRequest() # AuthValidateTokenRequest | 
+    api_instance = sapliy_fintech.generated.AuthServiceApi(api_client)
+    body = sapliy_fintech.generated.AuthValidateTokenRequest() # AuthValidateTokenRequest | 
 
     try:
         api_response = api_instance.auth_service_validate_token(body)

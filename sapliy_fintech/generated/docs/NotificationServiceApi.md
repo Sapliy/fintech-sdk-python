@@ -1,4 +1,4 @@
-# sapliy_fintech.NotificationServiceApi
+# sapliy_fintech.generated.NotificationServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,24 +17,24 @@ Method | HTTP request | Description
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.notifications_create_webhook_endpoint_request import NotificationsCreateWebhookEndpointRequest
-from sapliy_fintech.models.notifications_webhook_endpoint import NotificationsWebhookEndpoint
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.notifications_create_webhook_endpoint_request import NotificationsCreateWebhookEndpointRequest
+from sapliy_fintech.generated.models.notifications_webhook_endpoint import NotificationsWebhookEndpoint
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.NotificationServiceApi(api_client)
-    body = sapliy_fintech.NotificationsCreateWebhookEndpointRequest() # NotificationsCreateWebhookEndpointRequest | 
+    api_instance = sapliy_fintech.generated.NotificationServiceApi(api_client)
+    body = sapliy_fintech.generated.NotificationsCreateWebhookEndpointRequest() # NotificationsCreateWebhookEndpointRequest | 
 
     try:
         api_response = api_instance.notification_service_create_webhook_endpoint(body)
@@ -82,22 +82,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.notifications_delete_webhook_endpoint_response import NotificationsDeleteWebhookEndpointResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.notifications_delete_webhook_endpoint_response import NotificationsDeleteWebhookEndpointResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.NotificationServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.NotificationServiceApi(api_client)
     id = 'id_example' # str | 
 
     try:
@@ -146,22 +146,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.notifications_get_notification_history_response import NotificationsGetNotificationHistoryResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.notifications_get_notification_history_response import NotificationsGetNotificationHistoryResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.NotificationServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.NotificationServiceApi(api_client)
     user_id = 'user_id_example' # str |  (optional)
     limit = 56 # int |  (optional)
     offset = 56 # int |  (optional)
@@ -214,22 +214,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.notifications_list_webhook_endpoints_response import NotificationsListWebhookEndpointsResponse
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.notifications_list_webhook_endpoints_response import NotificationsListWebhookEndpointsResponse
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.NotificationServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.NotificationServiceApi(api_client)
 
     try:
         api_response = api_instance.notification_service_list_webhook_endpoints()

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.notifications_notification import NotificationsNotification
+from sapliy_fintech.generated.models.notifications_notification import NotificationsNotification
 
 # TODO update the JSON string below
 json = "{}"

@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.notifications_webhook_endpoint import NotificationsWebhookEndpoint
+from sapliy_fintech.generated.models.notifications_webhook_endpoint import NotificationsWebhookEndpoint
 
 # TODO update the JSON string below
 json = "{}"

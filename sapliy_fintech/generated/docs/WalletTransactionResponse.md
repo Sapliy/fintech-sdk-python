@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.wallet_transaction_response import WalletTransactionResponse
+from sapliy_fintech.generated.models.wallet_transaction_response import WalletTransactionResponse
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,11 +12,13 @@ Name | Type | Description | Notes
 **org_id** | **str** |  | [optional] 
 **role** | **str** |  | [optional] 
 **rate_limit_quota** | **int** |  | [optional] 
+**zone_id** | **str** |  | [optional] 
+**mode** | **str** |  | [optional] 
 
 ## Example
 
 ```python
-from sapliy_fintech.models.auth_validate_key_response import AuthValidateKeyResponse
+from sapliy_fintech.generated.models.auth_validate_key_response import AuthValidateKeyResponse
 
 # TODO update the JSON string below
 json = "{}"

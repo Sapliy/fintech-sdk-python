@@ -1,4 +1,4 @@
-# sapliy_fintech.PaymentServiceApi
+# sapliy_fintech.generated.PaymentServiceApi
 
 All URIs are relative to *http://localhost*
 
@@ -16,25 +16,25 @@ Method | HTTP request | Description
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.payment_service_confirm_payment_intent_body import PaymentServiceConfirmPaymentIntentBody
-from sapliy_fintech.models.payments_payment_intent import PaymentsPaymentIntent
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.payment_service_confirm_payment_intent_body import PaymentServiceConfirmPaymentIntentBody
+from sapliy_fintech.generated.models.payments_payment_intent import PaymentsPaymentIntent
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.PaymentServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.PaymentServiceApi(api_client)
     id = 'id_example' # str | 
-    body = sapliy_fintech.PaymentServiceConfirmPaymentIntentBody() # PaymentServiceConfirmPaymentIntentBody | 
+    body = sapliy_fintech.generated.PaymentServiceConfirmPaymentIntentBody() # PaymentServiceConfirmPaymentIntentBody | 
 
     try:
         api_response = api_instance.payment_service_confirm_payment_intent(id, body)
@@ -83,24 +83,24 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.payments_create_payment_intent_request import PaymentsCreatePaymentIntentRequest
-from sapliy_fintech.models.payments_payment_intent import PaymentsPaymentIntent
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.payments_create_payment_intent_request import PaymentsCreatePaymentIntentRequest
+from sapliy_fintech.generated.models.payments_payment_intent import PaymentsPaymentIntent
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.PaymentServiceApi(api_client)
-    body = sapliy_fintech.PaymentsCreatePaymentIntentRequest() # PaymentsCreatePaymentIntentRequest | 
+    api_instance = sapliy_fintech.generated.PaymentServiceApi(api_client)
+    body = sapliy_fintech.generated.PaymentsCreatePaymentIntentRequest() # PaymentsCreatePaymentIntentRequest | 
 
     try:
         api_response = api_instance.payment_service_create_payment_intent(body)
@@ -148,22 +148,22 @@ No authorization required
 
 
 ```python
-import sapliy_fintech
-from sapliy_fintech.models.payments_payment_intent import PaymentsPaymentIntent
-from sapliy_fintech.rest import ApiException
+import sapliy_fintech.generated
+from sapliy_fintech.generated.models.payments_payment_intent import PaymentsPaymentIntent
+from sapliy_fintech.generated.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sapliy_fintech.Configuration(
+configuration = sapliy_fintech.generated.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with sapliy_fintech.ApiClient(configuration) as api_client:
+with sapliy_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = sapliy_fintech.PaymentServiceApi(api_client)
+    api_instance = sapliy_fintech.generated.PaymentServiceApi(api_client)
     id = 'id_example' # str | 
     body = None # object | 
 

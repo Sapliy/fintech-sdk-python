@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.protobuf_any import ProtobufAny
+from sapliy_fintech.generated.models.protobuf_any import ProtobufAny
 
 # TODO update the JSON string below
 json = "{}"

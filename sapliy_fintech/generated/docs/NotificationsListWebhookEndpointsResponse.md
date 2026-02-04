@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.notifications_list_webhook_endpoints_response import NotificationsListWebhookEndpointsResponse
+from sapliy_fintech.generated.models.notifications_list_webhook_endpoints_response import NotificationsListWebhookEndpointsResponse
 
 # TODO update the JSON string below
 json = "{}"

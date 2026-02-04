@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from sapliy_fintech.models.ledger_get_account_response import LedgerGetAccountResponse
+from sapliy_fintech.generated.models.ledger_get_account_response import LedgerGetAccountResponse
 
 # TODO update the JSON string below
 json = "{}"
