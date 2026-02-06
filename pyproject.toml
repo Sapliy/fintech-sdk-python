@@ -27,4 +27,4 @@ dependencies = [
 "Homepage" = "https://github.com/Sapliy/fintech-ecosystem"
 
 [tool.setuptools]
-packages = ["sapliyio_fintech", "sapliy_fintech"]
+packages = ["sapliyio_fintech"]
