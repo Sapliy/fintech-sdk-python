@@ -6,7 +6,8 @@ from .api.ledger_service_api import LedgerServiceApi
 from .api.notification_service_api import NotificationServiceApi
 from .api.payment_service_api import PaymentServiceApi
 from .api.wallet_service_api import WalletServiceApi
-# form .api.flow_service_api import FlowServiceApi
+from .events import Events
+from .flows import Flows
 # from .api.zone_service_api import ZoneServiceApi
 
 class SapliyClient:
@@ -26,3 +27,5 @@ class SapliyClient:
         self.wallets = WalletServiceApi(self.api_client)
         # self.flows = FlowServiceApi(self.api_client)
         # self.zones = ZoneServiceApi(self.api_client)
+        self.flows = Flows(self.api_client)
+        self.events = Events(self.api_client)
