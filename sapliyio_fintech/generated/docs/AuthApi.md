@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v1_auth_login_post**](AuthApi.md#v1_auth_login_post) | **POST** /v1/auth/login | Login
 [**v1_auth_register_post**](AuthApi.md#v1_auth_register_post) | **POST** /v1/auth/register | Register a new user
+[**validate_key**](AuthApi.md#validate_key) | **POST** /v1/auth/validate | Validate an API key
 
 
 # **v1_auth_login_post**
@@ -139,6 +140,73 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** | Created |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **validate_key**
+> ValidateKey200Response validate_key(validate_key_request)
+
+Validate an API key
+
+### Example
+
+
+```python
+import sapliyio_fintech.generated
+from sapliyio_fintech.generated.models.validate_key200_response import ValidateKey200Response
+from sapliyio_fintech.generated.models.validate_key_request import ValidateKeyRequest
+from sapliyio_fintech.generated.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to https://api.sapliy.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = sapliyio_fintech.generated.Configuration(
+    host = "https://api.sapliy.io"
+)
+
+
+# Enter a context with an instance of the API client
+with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = sapliyio_fintech.generated.AuthApi(api_client)
+    validate_key_request = sapliyio_fintech.generated.ValidateKeyRequest() # ValidateKeyRequest | 
+
+    try:
+        # Validate an API key
+        api_response = api_instance.validate_key(validate_key_request)
+        print("The response of AuthApi->validate_key:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling AuthApi->validate_key: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **validate_key_request** | [**ValidateKeyRequest**](ValidateKeyRequest.md)|  | 
+
+### Return type
+
+[**ValidateKey200Response**](ValidateKey200Response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | OK |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

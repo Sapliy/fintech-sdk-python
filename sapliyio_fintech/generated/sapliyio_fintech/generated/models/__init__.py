@@ -16,6 +16,7 @@
 # import models into model package
 from sapliyio_fintech.generated.models.confirm_payment_intent_request import ConfirmPaymentIntentRequest
 from sapliyio_fintech.generated.models.create_payment_intent_request import CreatePaymentIntentRequest
+from sapliyio_fintech.generated.models.create_zone_request import CreateZoneRequest
 from sapliyio_fintech.generated.models.emit_event202_response import EmitEvent202Response
 from sapliyio_fintech.generated.models.emit_event_request import EmitEventRequest
 from sapliyio_fintech.generated.models.error_envelope import ErrorEnvelope
@@ -23,6 +24,7 @@ from sapliyio_fintech.generated.models.error_envelope_error import ErrorEnvelope
 from sapliyio_fintech.generated.models.ledger_account import LedgerAccount
 from sapliyio_fintech.generated.models.ledger_entry import LedgerEntry
 from sapliyio_fintech.generated.models.ledger_transaction import LedgerTransaction
+from sapliyio_fintech.generated.models.list_zones200_response_inner import ListZones200ResponseInner
 from sapliyio_fintech.generated.models.payment_intent import PaymentIntent
 from sapliyio_fintech.generated.models.subscription import Subscription
 from sapliyio_fintech.generated.models.user import User
@@ -35,5 +37,7 @@ from sapliyio_fintech.generated.models.v1_ledger_transactions_post_request impor
 from sapliyio_fintech.generated.models.v1_wallets_topup_post200_response import V1WalletsTopupPost200Response
 from sapliyio_fintech.generated.models.v1_wallets_topup_post_request import V1WalletsTopupPostRequest
 from sapliyio_fintech.generated.models.v1_wallets_transfer_post_request import V1WalletsTransferPostRequest
+from sapliyio_fintech.generated.models.validate_key200_response import ValidateKey200Response
+from sapliyio_fintech.generated.models.validate_key_request import ValidateKeyRequest
 from sapliyio_fintech.generated.models.wallet import Wallet
 
