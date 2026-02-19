@@ -37,40 +37,40 @@ __all__ = [
     "ApiKeyError",
     "ApiAttributeError",
     "ApiException",
+    "AutomationFlow",
+    "AutomationFlowEdge",
+    "AutomationFlowExecution",
+    "AutomationFlowExecutionStep",
+    "AutomationFlowNode",
+    "AutomationFlowTrigger",
+    "BillingSubscription",
     "ConfirmPaymentIntentRequest",
     "CreatePaymentIntentRequest",
+    "CreateSubscriptionRequest",
     "CreateZoneRequest",
-    "Edge",
     "EmitEvent202Response",
     "EmitEventRequest",
     "ErrorEnvelope",
     "ErrorEnvelopeError",
-    "ExecutionStep",
-    "Flow",
-    "FlowExecution",
     "GetPastEvents200Response",
     "LedgerAccount",
     "LedgerEntry",
     "LedgerTransaction",
     "ListFlows200Response",
     "ListZones200ResponseInner",
-    "Node",
     "PaymentIntent",
+    "RegisterUser201Response",
+    "RegisterUserRequest",
     "ReplayEvent200Response",
     "ReplayEventRequest",
     "ResumeExecution200Response",
-    "Subscription",
-    "Trigger",
+    "TopupWallet200Response",
+    "TopupWalletRequest",
+    "TransferWalletRequest",
     "User",
-    "V1AuthRegisterPost201Response",
-    "V1AuthRegisterPostRequest",
-    "V1BillingSubscriptionsPostRequest",
     "V1LedgerAccountsPostRequest",
     "V1LedgerTransactionsPost201Response",
     "V1LedgerTransactionsPostRequest",
-    "V1WalletsTopupPost200Response",
-    "V1WalletsTopupPostRequest",
-    "V1WalletsTransferPostRequest",
     "ValidateKey200Response",
     "ValidateKeyRequest",
     "Wallet",
@@ -99,40 +99,40 @@ from sapliyio_fintech.generated.exceptions import ApiAttributeError as ApiAttrib
 from sapliyio_fintech.generated.exceptions import ApiException as ApiException
 
 # import models into sdk package
+from sapliyio_fintech.generated.models.automation_flow import AutomationFlow as AutomationFlow
+from sapliyio_fintech.generated.models.automation_flow_edge import AutomationFlowEdge as AutomationFlowEdge
+from sapliyio_fintech.generated.models.automation_flow_execution import AutomationFlowExecution as AutomationFlowExecution
+from sapliyio_fintech.generated.models.automation_flow_execution_step import AutomationFlowExecutionStep as AutomationFlowExecutionStep
+from sapliyio_fintech.generated.models.automation_flow_node import AutomationFlowNode as AutomationFlowNode
+from sapliyio_fintech.generated.models.automation_flow_trigger import AutomationFlowTrigger as AutomationFlowTrigger
+from sapliyio_fintech.generated.models.billing_subscription import BillingSubscription as BillingSubscription
 from sapliyio_fintech.generated.models.confirm_payment_intent_request import ConfirmPaymentIntentRequest as ConfirmPaymentIntentRequest
 from sapliyio_fintech.generated.models.create_payment_intent_request import CreatePaymentIntentRequest as CreatePaymentIntentRequest
+from sapliyio_fintech.generated.models.create_subscription_request import CreateSubscriptionRequest as CreateSubscriptionRequest
 from sapliyio_fintech.generated.models.create_zone_request import CreateZoneRequest as CreateZoneRequest
-from sapliyio_fintech.generated.models.edge import Edge as Edge
 from sapliyio_fintech.generated.models.emit_event202_response import EmitEvent202Response as EmitEvent202Response
 from sapliyio_fintech.generated.models.emit_event_request import EmitEventRequest as EmitEventRequest
 from sapliyio_fintech.generated.models.error_envelope import ErrorEnvelope as ErrorEnvelope
 from sapliyio_fintech.generated.models.error_envelope_error import ErrorEnvelopeError as ErrorEnvelopeError
-from sapliyio_fintech.generated.models.execution_step import ExecutionStep as ExecutionStep
-from sapliyio_fintech.generated.models.flow import Flow as Flow
-from sapliyio_fintech.generated.models.flow_execution import FlowExecution as FlowExecution
 from sapliyio_fintech.generated.models.get_past_events200_response import GetPastEvents200Response as GetPastEvents200Response
 from sapliyio_fintech.generated.models.ledger_account import LedgerAccount as LedgerAccount
 from sapliyio_fintech.generated.models.ledger_entry import LedgerEntry as LedgerEntry
 from sapliyio_fintech.generated.models.ledger_transaction import LedgerTransaction as LedgerTransaction
 from sapliyio_fintech.generated.models.list_flows200_response import ListFlows200Response as ListFlows200Response
 from sapliyio_fintech.generated.models.list_zones200_response_inner import ListZones200ResponseInner as ListZones200ResponseInner
-from sapliyio_fintech.generated.models.node import Node as Node
 from sapliyio_fintech.generated.models.payment_intent import PaymentIntent as PaymentIntent
+from sapliyio_fintech.generated.models.register_user201_response import RegisterUser201Response as RegisterUser201Response
+from sapliyio_fintech.generated.models.register_user_request import RegisterUserRequest as RegisterUserRequest
 from sapliyio_fintech.generated.models.replay_event200_response import ReplayEvent200Response as ReplayEvent200Response
 from sapliyio_fintech.generated.models.replay_event_request import ReplayEventRequest as ReplayEventRequest
 from sapliyio_fintech.generated.models.resume_execution200_response import ResumeExecution200Response as ResumeExecution200Response
-from sapliyio_fintech.generated.models.subscription import Subscription as Subscription
-from sapliyio_fintech.generated.models.trigger import Trigger as Trigger
+from sapliyio_fintech.generated.models.topup_wallet200_response import TopupWallet200Response as TopupWallet200Response
+from sapliyio_fintech.generated.models.topup_wallet_request import TopupWalletRequest as TopupWalletRequest
+from sapliyio_fintech.generated.models.transfer_wallet_request import TransferWalletRequest as TransferWalletRequest
 from sapliyio_fintech.generated.models.user import User as User
-from sapliyio_fintech.generated.models.v1_auth_register_post201_response import V1AuthRegisterPost201Response as V1AuthRegisterPost201Response
-from sapliyio_fintech.generated.models.v1_auth_register_post_request import V1AuthRegisterPostRequest as V1AuthRegisterPostRequest
-from sapliyio_fintech.generated.models.v1_billing_subscriptions_post_request import V1BillingSubscriptionsPostRequest as V1BillingSubscriptionsPostRequest
 from sapliyio_fintech.generated.models.v1_ledger_accounts_post_request import V1LedgerAccountsPostRequest as V1LedgerAccountsPostRequest
 from sapliyio_fintech.generated.models.v1_ledger_transactions_post201_response import V1LedgerTransactionsPost201Response as V1LedgerTransactionsPost201Response
 from sapliyio_fintech.generated.models.v1_ledger_transactions_post_request import V1LedgerTransactionsPostRequest as V1LedgerTransactionsPostRequest
-from sapliyio_fintech.generated.models.v1_wallets_topup_post200_response import V1WalletsTopupPost200Response as V1WalletsTopupPost200Response
-from sapliyio_fintech.generated.models.v1_wallets_topup_post_request import V1WalletsTopupPostRequest as V1WalletsTopupPostRequest
-from sapliyio_fintech.generated.models.v1_wallets_transfer_post_request import V1WalletsTransferPostRequest as V1WalletsTransferPostRequest
 from sapliyio_fintech.generated.models.validate_key200_response import ValidateKey200Response as ValidateKey200Response
 from sapliyio_fintech.generated.models.validate_key_request import ValidateKeyRequest as ValidateKeyRequest
 from sapliyio_fintech.generated.models.wallet import Wallet as Wallet

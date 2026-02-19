@@ -27,17 +27,24 @@ class TestAuthApi(unittest.TestCase):
     def tearDown(self) -> None:
         pass
 
-    def test_v1_auth_login_post(self) -> None:
-        """Test case for v1_auth_login_post
+    def test_login_user(self) -> None:
+        """Test case for login_user
 
         Login
         """
         pass
 
-    def test_v1_auth_register_post(self) -> None:
-        """Test case for v1_auth_register_post
+    def test_register_user(self) -> None:
+        """Test case for register_user
 
         Register a new user
+        """
+        pass
+
+    def test_validate_key(self) -> None:
+        """Test case for validate_key
+
+        Validate an API key
         """
         pass
 

@@ -5,8 +5,8 @@ All URIs are relative to *https://api.sapliy.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**get_wallet**](WalletsApi.md#get_wallet) | **GET** /v1/wallets/{user_id} | Get Wallet Balance
-[**v1_wallets_topup_post**](WalletsApi.md#v1_wallets_topup_post) | **POST** /v1/wallets/topup | Top up a wallet
-[**v1_wallets_transfer_post**](WalletsApi.md#v1_wallets_transfer_post) | **POST** /v1/wallets/transfer | Transfer between wallets
+[**topup_wallet**](WalletsApi.md#topup_wallet) | **POST** /v1/wallets/topup | Top up a wallet
+[**transfer_wallet**](WalletsApi.md#transfer_wallet) | **POST** /v1/wallets/transfer | Transfer between wallets
 
 
 # **get_wallet**
@@ -89,8 +89,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_wallets_topup_post**
-> V1WalletsTopupPost200Response v1_wallets_topup_post(v1_wallets_topup_post_request)
+# **topup_wallet**
+> TopupWallet200Response topup_wallet(x_zone_id, topup_wallet_request, x_zone_mode=x_zone_mode)
 
 Top up a wallet
 
@@ -100,8 +100,8 @@ Top up a wallet
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.v1_wallets_topup_post200_response import V1WalletsTopupPost200Response
-from sapliyio_fintech.generated.models.v1_wallets_topup_post_request import V1WalletsTopupPostRequest
+from sapliyio_fintech.generated.models.topup_wallet200_response import TopupWallet200Response
+from sapliyio_fintech.generated.models.topup_wallet_request import TopupWalletRequest
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -125,15 +125,17 @@ configuration = sapliyio_fintech.generated.Configuration(
 with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sapliyio_fintech.generated.WalletsApi(api_client)
-    v1_wallets_topup_post_request = sapliyio_fintech.generated.V1WalletsTopupPostRequest() # V1WalletsTopupPostRequest | 
+    x_zone_id = 'x_zone_id_example' # str | The ID of the zone for this request.
+    topup_wallet_request = sapliyio_fintech.generated.TopupWalletRequest() # TopupWalletRequest | 
+    x_zone_mode = 'x_zone_mode_example' # str | The mode of the zone (live or test). (optional)
 
     try:
         # Top up a wallet
-        api_response = api_instance.v1_wallets_topup_post(v1_wallets_topup_post_request)
-        print("The response of WalletsApi->v1_wallets_topup_post:\n")
+        api_response = api_instance.topup_wallet(x_zone_id, topup_wallet_request, x_zone_mode=x_zone_mode)
+        print("The response of WalletsApi->topup_wallet:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling WalletsApi->v1_wallets_topup_post: %s\n" % e)
+        print("Exception when calling WalletsApi->topup_wallet: %s\n" % e)
 ```
 
 
@@ -143,11 +145,13 @@ with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1_wallets_topup_post_request** | [**V1WalletsTopupPostRequest**](V1WalletsTopupPostRequest.md)|  | 
+ **x_zone_id** | **str**| The ID of the zone for this request. | 
+ **topup_wallet_request** | [**TopupWalletRequest**](TopupWalletRequest.md)|  | 
+ **x_zone_mode** | **str**| The mode of the zone (live or test). | [optional] 
 
 ### Return type
 
-[**V1WalletsTopupPost200Response**](V1WalletsTopupPost200Response.md)
+[**TopupWallet200Response**](TopupWallet200Response.md)
 
 ### Authorization
 
@@ -166,8 +170,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_wallets_transfer_post**
-> V1WalletsTopupPost200Response v1_wallets_transfer_post(v1_wallets_transfer_post_request)
+# **transfer_wallet**
+> TopupWallet200Response transfer_wallet(x_zone_id, transfer_wallet_request, x_zone_mode=x_zone_mode)
 
 Transfer between wallets
 
@@ -177,8 +181,8 @@ Transfer between wallets
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.v1_wallets_topup_post200_response import V1WalletsTopupPost200Response
-from sapliyio_fintech.generated.models.v1_wallets_transfer_post_request import V1WalletsTransferPostRequest
+from sapliyio_fintech.generated.models.topup_wallet200_response import TopupWallet200Response
+from sapliyio_fintech.generated.models.transfer_wallet_request import TransferWalletRequest
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -202,15 +206,17 @@ configuration = sapliyio_fintech.generated.Configuration(
 with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sapliyio_fintech.generated.WalletsApi(api_client)
-    v1_wallets_transfer_post_request = sapliyio_fintech.generated.V1WalletsTransferPostRequest() # V1WalletsTransferPostRequest | 
+    x_zone_id = 'x_zone_id_example' # str | The ID of the zone for this request.
+    transfer_wallet_request = sapliyio_fintech.generated.TransferWalletRequest() # TransferWalletRequest | 
+    x_zone_mode = 'x_zone_mode_example' # str | The mode of the zone (live or test). (optional)
 
     try:
         # Transfer between wallets
-        api_response = api_instance.v1_wallets_transfer_post(v1_wallets_transfer_post_request)
-        print("The response of WalletsApi->v1_wallets_transfer_post:\n")
+        api_response = api_instance.transfer_wallet(x_zone_id, transfer_wallet_request, x_zone_mode=x_zone_mode)
+        print("The response of WalletsApi->transfer_wallet:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling WalletsApi->v1_wallets_transfer_post: %s\n" % e)
+        print("Exception when calling WalletsApi->transfer_wallet: %s\n" % e)
 ```
 
 
@@ -220,11 +226,13 @@ with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1_wallets_transfer_post_request** | [**V1WalletsTransferPostRequest**](V1WalletsTransferPostRequest.md)|  | 
+ **x_zone_id** | **str**| The ID of the zone for this request. | 
+ **transfer_wallet_request** | [**TransferWalletRequest**](TransferWalletRequest.md)|  | 
+ **x_zone_mode** | **str**| The mode of the zone (live or test). | [optional] 
 
 ### Return type
 
-[**V1WalletsTopupPost200Response**](V1WalletsTopupPost200Response.md)
+[**TopupWallet200Response**](TopupWallet200Response.md)
 
 ### Authorization
 

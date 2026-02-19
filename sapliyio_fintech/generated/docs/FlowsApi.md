@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_flow**
-> Flow create_flow(flow)
+> AutomationFlow create_flow(automation_flow)
 
 Create a Flow
 
@@ -22,7 +22,7 @@ Create a Flow
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.flow import Flow
+from sapliyio_fintech.generated.models.automation_flow import AutomationFlow
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -46,11 +46,11 @@ configuration = sapliyio_fintech.generated.Configuration(
 with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sapliyio_fintech.generated.FlowsApi(api_client)
-    flow = sapliyio_fintech.generated.Flow() # Flow | 
+    automation_flow = sapliyio_fintech.generated.AutomationFlow() # AutomationFlow | 
 
     try:
         # Create a Flow
-        api_response = api_instance.create_flow(flow)
+        api_response = api_instance.create_flow(automation_flow)
         print("The response of FlowsApi->create_flow:\n")
         pprint(api_response)
     except Exception as e:
@@ -64,11 +64,11 @@ with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **flow** | [**Flow**](Flow.md)|  | 
+ **automation_flow** | [**AutomationFlow**](AutomationFlow.md)|  | 
 
 ### Return type
 
-[**Flow**](Flow.md)
+[**AutomationFlow**](AutomationFlow.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_flow**
-> Flow get_flow(flow_id)
+> AutomationFlow get_flow(flow_id)
 
 Get Flow details
 
@@ -171,7 +171,7 @@ Get Flow details
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.flow import Flow
+from sapliyio_fintech.generated.models.automation_flow import AutomationFlow
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Flow**](Flow.md)
+[**AutomationFlow**](AutomationFlow.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_flow**
-> Flow update_flow(flow_id, flow)
+> AutomationFlow update_flow(flow_id, automation_flow)
 
 Update a Flow
 
@@ -323,7 +323,7 @@ Update a Flow
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.flow import Flow
+from sapliyio_fintech.generated.models.automation_flow import AutomationFlow
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -348,11 +348,11 @@ with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sapliyio_fintech.generated.FlowsApi(api_client)
     flow_id = 'flow_id_example' # str | 
-    flow = sapliyio_fintech.generated.Flow() # Flow | 
+    automation_flow = sapliyio_fintech.generated.AutomationFlow() # AutomationFlow | 
 
     try:
         # Update a Flow
-        api_response = api_instance.update_flow(flow_id, flow)
+        api_response = api_instance.update_flow(flow_id, automation_flow)
         print("The response of FlowsApi->update_flow:\n")
         pprint(api_response)
     except Exception as e:
@@ -367,11 +367,11 @@ with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **flow_id** | **str**|  | 
- **flow** | [**Flow**](Flow.md)|  | 
+ **automation_flow** | [**AutomationFlow**](AutomationFlow.md)|  | 
 
 ### Return type
 
-[**Flow**](Flow.md)
+[**AutomationFlow**](AutomationFlow.md)
 
 ### Authorization
 

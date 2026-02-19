@@ -5,7 +5,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**flows** | [**List[Flow]**](Flow.md) |  | [optional] 
+**flows** | [**List[AutomationFlow]**](AutomationFlow.md) |  | [optional] 
 **count** | **int** |  | [optional] 
 
 ## Example

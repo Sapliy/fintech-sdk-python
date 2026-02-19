@@ -18,19 +18,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt
-from typing import Any, ClassVar, Dict, List, Optional
-from sapliyio_fintech.generated.models.automation_flow import AutomationFlow
+from pydantic import BaseModel, ConfigDict, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ListFlows200Response(BaseModel):
+class TopupWalletRequest(BaseModel):
     """
-    ListFlows200Response
+    TopupWalletRequest
     """ # noqa: E501
-    flows: Optional[List[AutomationFlow]] = None
-    count: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["flows", "count"]
+    amount: StrictInt
+    currency: StrictStr
+    reference_id: StrictStr
+    __properties: ClassVar[List[str]] = ["amount", "currency", "reference_id"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +50,7 @@ class ListFlows200Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ListFlows200Response from a JSON string"""
+        """Create an instance of TopupWalletRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,18 +71,11 @@ class ListFlows200Response(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in flows (list)
-        _items = []
-        if self.flows:
-            for _item_flows in self.flows:
-                if _item_flows:
-                    _items.append(_item_flows.to_dict())
-            _dict['flows'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ListFlows200Response from a dict"""
+        """Create an instance of TopupWalletRequest from a dict"""
         if obj is None:
             return None
 
@@ -90,8 +83,9 @@ class ListFlows200Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "flows": [AutomationFlow.from_dict(_item) for _item in obj["flows"]] if obj.get("flows") is not None else None,
-            "count": obj.get("count")
+            "amount": obj.get("amount"),
+            "currency": obj.get("currency"),
+            "reference_id": obj.get("reference_id")
         })
         return _obj
 

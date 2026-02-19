@@ -18,19 +18,21 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, StrictInt
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from sapliyio_fintech.generated.models.automation_flow import AutomationFlow
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ListFlows200Response(BaseModel):
+class AutomationFlowExecutionStep(BaseModel):
     """
-    ListFlows200Response
+    AutomationFlowExecutionStep
     """ # noqa: E501
-    flows: Optional[List[AutomationFlow]] = None
-    count: Optional[StrictInt] = None
-    __properties: ClassVar[List[str]] = ["flows", "count"]
+    node_id: StrictStr
+    status: StrictStr
+    input: Optional[Dict[str, Any]] = None
+    output: Optional[Dict[str, Any]] = None
+    error: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["node_id", "status", "input", "output", "error"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -50,7 +52,7 @@ class ListFlows200Response(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ListFlows200Response from a JSON string"""
+        """Create an instance of AutomationFlowExecutionStep from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -71,18 +73,11 @@ class ListFlows200Response(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in flows (list)
-        _items = []
-        if self.flows:
-            for _item_flows in self.flows:
-                if _item_flows:
-                    _items.append(_item_flows.to_dict())
-            _dict['flows'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ListFlows200Response from a dict"""
+        """Create an instance of AutomationFlowExecutionStep from a dict"""
         if obj is None:
             return None
 
@@ -90,8 +85,11 @@ class ListFlows200Response(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "flows": [AutomationFlow.from_dict(_item) for _item in obj["flows"]] if obj.get("flows") is not None else None,
-            "count": obj.get("count")
+            "node_id": obj.get("node_id"),
+            "status": obj.get("status"),
+            "input": obj.get("input"),
+            "output": obj.get("output"),
+            "error": obj.get("error")
         })
         return _obj
 

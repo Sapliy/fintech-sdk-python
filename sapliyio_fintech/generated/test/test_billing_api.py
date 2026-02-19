@@ -34,17 +34,17 @@ class TestBillingApi(unittest.TestCase):
         """
         pass
 
+    def test_create_subscription(self) -> None:
+        """Test case for create_subscription
+
+        Create Subscription
+        """
+        pass
+
     def test_get_subscription(self) -> None:
         """Test case for get_subscription
 
         Get Subscription details
-        """
-        pass
-
-    def test_v1_billing_subscriptions_post(self) -> None:
-        """Test case for v1_billing_subscriptions_post
-
-        Create Subscription
         """
         pass
 

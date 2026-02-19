@@ -34,6 +34,20 @@ class TestEventsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_past_events(self) -> None:
+        """Test case for get_past_events
+
+        Get Past Events (Webhook Replay)
+        """
+        pass
+
+    def test_replay_event(self) -> None:
+        """Test case for replay_event
+
+        Replay an Event
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

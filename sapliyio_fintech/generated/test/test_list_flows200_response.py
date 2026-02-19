@@ -37,7 +37,7 @@ class TestListFlows200Response(unittest.TestCase):
         if include_optional:
             return ListFlows200Response(
                 flows = [
-                    sapliyio_fintech.generated.models.flow.Flow(
+                    sapliyio_fintech.generated.models.automation_flow.AutomationFlow(
                         id = '', 
                         org_id = '', 
                         zone_id = '', 
@@ -45,19 +45,19 @@ class TestListFlows200Response(unittest.TestCase):
                         description = '', 
                         enabled = True, 
                         version = 56, 
-                        trigger = sapliyio_fintech.generated.models.trigger.Trigger(
+                        trigger = sapliyio_fintech.generated.models.automation_flow_trigger.AutomationFlowTrigger(
                             type = '', 
                             event_type = '', 
                             config = sapliyio_fintech.generated.models.config.config(), ), 
                         nodes = [
-                            sapliyio_fintech.generated.models.node.Node(
+                            sapliyio_fintech.generated.models.automation_flow_node.AutomationFlowNode(
                                 id = '', 
                                 type = '', 
                                 position = sapliyio_fintech.generated.models.position.position(), 
                                 data = sapliyio_fintech.generated.models.data.data(), )
                             ], 
                         edges = [
-                            sapliyio_fintech.generated.models.edge.Edge(
+                            sapliyio_fintech.generated.models.automation_flow_edge.AutomationFlowEdge(
                                 id = '', 
                                 source = '', 
                                 target = '', 

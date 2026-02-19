@@ -20,9 +20,9 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from sapliyio_fintech.generated.models.v1_wallets_topup_post200_response import V1WalletsTopupPost200Response
-from sapliyio_fintech.generated.models.v1_wallets_topup_post_request import V1WalletsTopupPostRequest
-from sapliyio_fintech.generated.models.v1_wallets_transfer_post_request import V1WalletsTransferPostRequest
+from sapliyio_fintech.generated.models.topup_wallet200_response import TopupWallet200Response
+from sapliyio_fintech.generated.models.topup_wallet_request import TopupWalletRequest
+from sapliyio_fintech.generated.models.transfer_wallet_request import TransferWalletRequest
 from sapliyio_fintech.generated.models.wallet import Wallet
 
 from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
@@ -332,9 +332,11 @@ class WalletsApi:
 
 
     @validate_call
-    def v1_wallets_topup_post(
+    def topup_wallet(
         self,
-        v1_wallets_topup_post_request: V1WalletsTopupPostRequest,
+        x_zone_id: Annotated[StrictStr, Field(description="The ID of the zone for this request.")],
+        topup_wallet_request: TopupWalletRequest,
+        x_zone_mode: Annotated[Optional[StrictStr], Field(description="The mode of the zone (live or test).")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -347,12 +349,16 @@ class WalletsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1WalletsTopupPost200Response:
+    ) -> TopupWallet200Response:
         """Top up a wallet
 
 
-        :param v1_wallets_topup_post_request: (required)
-        :type v1_wallets_topup_post_request: V1WalletsTopupPostRequest
+        :param x_zone_id: The ID of the zone for this request. (required)
+        :type x_zone_id: str
+        :param topup_wallet_request: (required)
+        :type topup_wallet_request: TopupWalletRequest
+        :param x_zone_mode: The mode of the zone (live or test).
+        :type x_zone_mode: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -375,8 +381,10 @@ class WalletsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_wallets_topup_post_serialize(
-            v1_wallets_topup_post_request=v1_wallets_topup_post_request,
+        _param = self._topup_wallet_serialize(
+            x_zone_id=x_zone_id,
+            topup_wallet_request=topup_wallet_request,
+            x_zone_mode=x_zone_mode,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -384,7 +392,7 @@ class WalletsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1WalletsTopupPost200Response",
+            '200': "TopupWallet200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -398,9 +406,11 @@ class WalletsApi:
 
 
     @validate_call
-    def v1_wallets_topup_post_with_http_info(
+    def topup_wallet_with_http_info(
         self,
-        v1_wallets_topup_post_request: V1WalletsTopupPostRequest,
+        x_zone_id: Annotated[StrictStr, Field(description="The ID of the zone for this request.")],
+        topup_wallet_request: TopupWalletRequest,
+        x_zone_mode: Annotated[Optional[StrictStr], Field(description="The mode of the zone (live or test).")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -413,12 +423,16 @@ class WalletsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1WalletsTopupPost200Response]:
+    ) -> ApiResponse[TopupWallet200Response]:
         """Top up a wallet
 
 
-        :param v1_wallets_topup_post_request: (required)
-        :type v1_wallets_topup_post_request: V1WalletsTopupPostRequest
+        :param x_zone_id: The ID of the zone for this request. (required)
+        :type x_zone_id: str
+        :param topup_wallet_request: (required)
+        :type topup_wallet_request: TopupWalletRequest
+        :param x_zone_mode: The mode of the zone (live or test).
+        :type x_zone_mode: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -441,8 +455,10 @@ class WalletsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_wallets_topup_post_serialize(
-            v1_wallets_topup_post_request=v1_wallets_topup_post_request,
+        _param = self._topup_wallet_serialize(
+            x_zone_id=x_zone_id,
+            topup_wallet_request=topup_wallet_request,
+            x_zone_mode=x_zone_mode,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -450,7 +466,7 @@ class WalletsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1WalletsTopupPost200Response",
+            '200': "TopupWallet200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -464,9 +480,11 @@ class WalletsApi:
 
 
     @validate_call
-    def v1_wallets_topup_post_without_preload_content(
+    def topup_wallet_without_preload_content(
         self,
-        v1_wallets_topup_post_request: V1WalletsTopupPostRequest,
+        x_zone_id: Annotated[StrictStr, Field(description="The ID of the zone for this request.")],
+        topup_wallet_request: TopupWalletRequest,
+        x_zone_mode: Annotated[Optional[StrictStr], Field(description="The mode of the zone (live or test).")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -483,8 +501,12 @@ class WalletsApi:
         """Top up a wallet
 
 
-        :param v1_wallets_topup_post_request: (required)
-        :type v1_wallets_topup_post_request: V1WalletsTopupPostRequest
+        :param x_zone_id: The ID of the zone for this request. (required)
+        :type x_zone_id: str
+        :param topup_wallet_request: (required)
+        :type topup_wallet_request: TopupWalletRequest
+        :param x_zone_mode: The mode of the zone (live or test).
+        :type x_zone_mode: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -507,8 +529,10 @@ class WalletsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_wallets_topup_post_serialize(
-            v1_wallets_topup_post_request=v1_wallets_topup_post_request,
+        _param = self._topup_wallet_serialize(
+            x_zone_id=x_zone_id,
+            topup_wallet_request=topup_wallet_request,
+            x_zone_mode=x_zone_mode,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -516,7 +540,7 @@ class WalletsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1WalletsTopupPost200Response",
+            '200': "TopupWallet200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -525,9 +549,11 @@ class WalletsApi:
         return response_data.response
 
 
-    def _v1_wallets_topup_post_serialize(
+    def _topup_wallet_serialize(
         self,
-        v1_wallets_topup_post_request,
+        x_zone_id,
+        topup_wallet_request,
+        x_zone_mode,
         _request_auth,
         _content_type,
         _headers,
@@ -551,10 +577,14 @@ class WalletsApi:
         # process the path parameters
         # process the query parameters
         # process the header parameters
+        if x_zone_id is not None:
+            _header_params['X-Zone-ID'] = x_zone_id
+        if x_zone_mode is not None:
+            _header_params['X-Zone-Mode'] = x_zone_mode
         # process the form parameters
         # process the body parameter
-        if v1_wallets_topup_post_request is not None:
-            _body_params = v1_wallets_topup_post_request
+        if topup_wallet_request is not None:
+            _body_params = topup_wallet_request
 
 
         # set the HTTP header `Accept`
@@ -603,9 +633,11 @@ class WalletsApi:
 
 
     @validate_call
-    def v1_wallets_transfer_post(
+    def transfer_wallet(
         self,
-        v1_wallets_transfer_post_request: V1WalletsTransferPostRequest,
+        x_zone_id: Annotated[StrictStr, Field(description="The ID of the zone for this request.")],
+        transfer_wallet_request: TransferWalletRequest,
+        x_zone_mode: Annotated[Optional[StrictStr], Field(description="The mode of the zone (live or test).")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -618,12 +650,16 @@ class WalletsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1WalletsTopupPost200Response:
+    ) -> TopupWallet200Response:
         """Transfer between wallets
 
 
-        :param v1_wallets_transfer_post_request: (required)
-        :type v1_wallets_transfer_post_request: V1WalletsTransferPostRequest
+        :param x_zone_id: The ID of the zone for this request. (required)
+        :type x_zone_id: str
+        :param transfer_wallet_request: (required)
+        :type transfer_wallet_request: TransferWalletRequest
+        :param x_zone_mode: The mode of the zone (live or test).
+        :type x_zone_mode: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -646,8 +682,10 @@ class WalletsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_wallets_transfer_post_serialize(
-            v1_wallets_transfer_post_request=v1_wallets_transfer_post_request,
+        _param = self._transfer_wallet_serialize(
+            x_zone_id=x_zone_id,
+            transfer_wallet_request=transfer_wallet_request,
+            x_zone_mode=x_zone_mode,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -655,7 +693,7 @@ class WalletsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1WalletsTopupPost200Response",
+            '200': "TopupWallet200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -669,9 +707,11 @@ class WalletsApi:
 
 
     @validate_call
-    def v1_wallets_transfer_post_with_http_info(
+    def transfer_wallet_with_http_info(
         self,
-        v1_wallets_transfer_post_request: V1WalletsTransferPostRequest,
+        x_zone_id: Annotated[StrictStr, Field(description="The ID of the zone for this request.")],
+        transfer_wallet_request: TransferWalletRequest,
+        x_zone_mode: Annotated[Optional[StrictStr], Field(description="The mode of the zone (live or test).")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -684,12 +724,16 @@ class WalletsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1WalletsTopupPost200Response]:
+    ) -> ApiResponse[TopupWallet200Response]:
         """Transfer between wallets
 
 
-        :param v1_wallets_transfer_post_request: (required)
-        :type v1_wallets_transfer_post_request: V1WalletsTransferPostRequest
+        :param x_zone_id: The ID of the zone for this request. (required)
+        :type x_zone_id: str
+        :param transfer_wallet_request: (required)
+        :type transfer_wallet_request: TransferWalletRequest
+        :param x_zone_mode: The mode of the zone (live or test).
+        :type x_zone_mode: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -712,8 +756,10 @@ class WalletsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_wallets_transfer_post_serialize(
-            v1_wallets_transfer_post_request=v1_wallets_transfer_post_request,
+        _param = self._transfer_wallet_serialize(
+            x_zone_id=x_zone_id,
+            transfer_wallet_request=transfer_wallet_request,
+            x_zone_mode=x_zone_mode,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -721,7 +767,7 @@ class WalletsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1WalletsTopupPost200Response",
+            '200': "TopupWallet200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -735,9 +781,11 @@ class WalletsApi:
 
 
     @validate_call
-    def v1_wallets_transfer_post_without_preload_content(
+    def transfer_wallet_without_preload_content(
         self,
-        v1_wallets_transfer_post_request: V1WalletsTransferPostRequest,
+        x_zone_id: Annotated[StrictStr, Field(description="The ID of the zone for this request.")],
+        transfer_wallet_request: TransferWalletRequest,
+        x_zone_mode: Annotated[Optional[StrictStr], Field(description="The mode of the zone (live or test).")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -754,8 +802,12 @@ class WalletsApi:
         """Transfer between wallets
 
 
-        :param v1_wallets_transfer_post_request: (required)
-        :type v1_wallets_transfer_post_request: V1WalletsTransferPostRequest
+        :param x_zone_id: The ID of the zone for this request. (required)
+        :type x_zone_id: str
+        :param transfer_wallet_request: (required)
+        :type transfer_wallet_request: TransferWalletRequest
+        :param x_zone_mode: The mode of the zone (live or test).
+        :type x_zone_mode: str
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -778,8 +830,10 @@ class WalletsApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_wallets_transfer_post_serialize(
-            v1_wallets_transfer_post_request=v1_wallets_transfer_post_request,
+        _param = self._transfer_wallet_serialize(
+            x_zone_id=x_zone_id,
+            transfer_wallet_request=transfer_wallet_request,
+            x_zone_mode=x_zone_mode,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -787,7 +841,7 @@ class WalletsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1WalletsTopupPost200Response",
+            '200': "TopupWallet200Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -796,9 +850,11 @@ class WalletsApi:
         return response_data.response
 
 
-    def _v1_wallets_transfer_post_serialize(
+    def _transfer_wallet_serialize(
         self,
-        v1_wallets_transfer_post_request,
+        x_zone_id,
+        transfer_wallet_request,
+        x_zone_mode,
         _request_auth,
         _content_type,
         _headers,
@@ -822,10 +878,14 @@ class WalletsApi:
         # process the path parameters
         # process the query parameters
         # process the header parameters
+        if x_zone_id is not None:
+            _header_params['X-Zone-ID'] = x_zone_id
+        if x_zone_mode is not None:
+            _header_params['X-Zone-Mode'] = x_zone_mode
         # process the form parameters
         # process the body parameter
-        if v1_wallets_transfer_post_request is not None:
-            _body_params = v1_wallets_transfer_post_request
+        if transfer_wallet_request is not None:
+            _body_params = transfer_wallet_request
 
 
         # set the HTTP header `Accept`

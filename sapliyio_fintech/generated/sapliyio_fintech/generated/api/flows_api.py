@@ -18,7 +18,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from sapliyio_fintech.generated.models.flow import Flow
+from sapliyio_fintech.generated.models.automation_flow import AutomationFlow
 from sapliyio_fintech.generated.models.list_flows200_response import ListFlows200Response
 
 from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
@@ -42,7 +42,7 @@ class FlowsApi:
     @validate_call
     def create_flow(
         self,
-        flow: Flow,
+        automation_flow: AutomationFlow,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -55,12 +55,12 @@ class FlowsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Flow:
+    ) -> AutomationFlow:
         """Create a Flow
 
 
-        :param flow: (required)
-        :type flow: Flow
+        :param automation_flow: (required)
+        :type automation_flow: AutomationFlow
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -84,7 +84,7 @@ class FlowsApi:
         """ # noqa: E501
 
         _param = self._create_flow_serialize(
-            flow=flow,
+            automation_flow=automation_flow,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -92,7 +92,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Flow",
+            '201': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -108,7 +108,7 @@ class FlowsApi:
     @validate_call
     def create_flow_with_http_info(
         self,
-        flow: Flow,
+        automation_flow: AutomationFlow,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -121,12 +121,12 @@ class FlowsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Flow]:
+    ) -> ApiResponse[AutomationFlow]:
         """Create a Flow
 
 
-        :param flow: (required)
-        :type flow: Flow
+        :param automation_flow: (required)
+        :type automation_flow: AutomationFlow
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -150,7 +150,7 @@ class FlowsApi:
         """ # noqa: E501
 
         _param = self._create_flow_serialize(
-            flow=flow,
+            automation_flow=automation_flow,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -158,7 +158,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Flow",
+            '201': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -174,7 +174,7 @@ class FlowsApi:
     @validate_call
     def create_flow_without_preload_content(
         self,
-        flow: Flow,
+        automation_flow: AutomationFlow,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -191,8 +191,8 @@ class FlowsApi:
         """Create a Flow
 
 
-        :param flow: (required)
-        :type flow: Flow
+        :param automation_flow: (required)
+        :type automation_flow: AutomationFlow
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -216,7 +216,7 @@ class FlowsApi:
         """ # noqa: E501
 
         _param = self._create_flow_serialize(
-            flow=flow,
+            automation_flow=automation_flow,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -224,7 +224,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "Flow",
+            '201': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -235,7 +235,7 @@ class FlowsApi:
 
     def _create_flow_serialize(
         self,
-        flow,
+        automation_flow,
         _request_auth,
         _content_type,
         _headers,
@@ -261,8 +261,8 @@ class FlowsApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if flow is not None:
-            _body_params = flow
+        if automation_flow is not None:
+            _body_params = automation_flow
 
 
         # set the HTTP header `Accept`
@@ -577,7 +577,7 @@ class FlowsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Flow:
+    ) -> AutomationFlow:
         """Get Flow details
 
 
@@ -614,7 +614,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Flow",
+            '200': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -643,7 +643,7 @@ class FlowsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Flow]:
+    ) -> ApiResponse[AutomationFlow]:
         """Get Flow details
 
 
@@ -680,7 +680,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Flow",
+            '200': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -746,7 +746,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Flow",
+            '200': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1081,7 +1081,7 @@ class FlowsApi:
     def update_flow(
         self,
         flow_id: StrictStr,
-        flow: Flow,
+        automation_flow: AutomationFlow,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1094,14 +1094,14 @@ class FlowsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> Flow:
+    ) -> AutomationFlow:
         """Update a Flow
 
 
         :param flow_id: (required)
         :type flow_id: str
-        :param flow: (required)
-        :type flow: Flow
+        :param automation_flow: (required)
+        :type automation_flow: AutomationFlow
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1126,7 +1126,7 @@ class FlowsApi:
 
         _param = self._update_flow_serialize(
             flow_id=flow_id,
-            flow=flow,
+            automation_flow=automation_flow,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1134,7 +1134,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Flow",
+            '200': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1151,7 +1151,7 @@ class FlowsApi:
     def update_flow_with_http_info(
         self,
         flow_id: StrictStr,
-        flow: Flow,
+        automation_flow: AutomationFlow,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1164,14 +1164,14 @@ class FlowsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[Flow]:
+    ) -> ApiResponse[AutomationFlow]:
         """Update a Flow
 
 
         :param flow_id: (required)
         :type flow_id: str
-        :param flow: (required)
-        :type flow: Flow
+        :param automation_flow: (required)
+        :type automation_flow: AutomationFlow
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1196,7 +1196,7 @@ class FlowsApi:
 
         _param = self._update_flow_serialize(
             flow_id=flow_id,
-            flow=flow,
+            automation_flow=automation_flow,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1204,7 +1204,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Flow",
+            '200': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1221,7 +1221,7 @@ class FlowsApi:
     def update_flow_without_preload_content(
         self,
         flow_id: StrictStr,
-        flow: Flow,
+        automation_flow: AutomationFlow,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -1240,8 +1240,8 @@ class FlowsApi:
 
         :param flow_id: (required)
         :type flow_id: str
-        :param flow: (required)
-        :type flow: Flow
+        :param automation_flow: (required)
+        :type automation_flow: AutomationFlow
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -1266,7 +1266,7 @@ class FlowsApi:
 
         _param = self._update_flow_serialize(
             flow_id=flow_id,
-            flow=flow,
+            automation_flow=automation_flow,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -1274,7 +1274,7 @@ class FlowsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "Flow",
+            '200': "AutomationFlow",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -1286,7 +1286,7 @@ class FlowsApi:
     def _update_flow_serialize(
         self,
         flow_id,
-        flow,
+        automation_flow,
         _request_auth,
         _content_type,
         _headers,
@@ -1314,8 +1314,8 @@ class FlowsApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if flow is not None:
-            _body_params = flow
+        if automation_flow is not None:
+            _body_params = automation_flow
 
 
         # set the HTTP header `Accept`

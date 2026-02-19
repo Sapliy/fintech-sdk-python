@@ -17,8 +17,8 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from sapliyio_fintech.generated.models.v1_auth_register_post201_response import V1AuthRegisterPost201Response
-from sapliyio_fintech.generated.models.v1_auth_register_post_request import V1AuthRegisterPostRequest
+from sapliyio_fintech.generated.models.register_user201_response import RegisterUser201Response
+from sapliyio_fintech.generated.models.register_user_request import RegisterUserRequest
 from sapliyio_fintech.generated.models.validate_key200_response import ValidateKey200Response
 from sapliyio_fintech.generated.models.validate_key_request import ValidateKeyRequest
 
@@ -41,9 +41,9 @@ class AuthApi:
 
 
     @validate_call
-    def v1_auth_login_post(
+    def login_user(
         self,
-        v1_auth_register_post_request: V1AuthRegisterPostRequest,
+        register_user_request: RegisterUserRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -56,12 +56,12 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1AuthRegisterPost201Response:
+    ) -> RegisterUser201Response:
         """Login
 
 
-        :param v1_auth_register_post_request: (required)
-        :type v1_auth_register_post_request: V1AuthRegisterPostRequest
+        :param register_user_request: (required)
+        :type register_user_request: RegisterUserRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -84,8 +84,8 @@ class AuthApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_auth_login_post_serialize(
-            v1_auth_register_post_request=v1_auth_register_post_request,
+        _param = self._login_user_serialize(
+            register_user_request=register_user_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -93,7 +93,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1AuthRegisterPost201Response",
+            '200': "RegisterUser201Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -107,9 +107,9 @@ class AuthApi:
 
 
     @validate_call
-    def v1_auth_login_post_with_http_info(
+    def login_user_with_http_info(
         self,
-        v1_auth_register_post_request: V1AuthRegisterPostRequest,
+        register_user_request: RegisterUserRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -122,12 +122,12 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1AuthRegisterPost201Response]:
+    ) -> ApiResponse[RegisterUser201Response]:
         """Login
 
 
-        :param v1_auth_register_post_request: (required)
-        :type v1_auth_register_post_request: V1AuthRegisterPostRequest
+        :param register_user_request: (required)
+        :type register_user_request: RegisterUserRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -150,8 +150,8 @@ class AuthApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_auth_login_post_serialize(
-            v1_auth_register_post_request=v1_auth_register_post_request,
+        _param = self._login_user_serialize(
+            register_user_request=register_user_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -159,7 +159,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1AuthRegisterPost201Response",
+            '200': "RegisterUser201Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -173,9 +173,9 @@ class AuthApi:
 
 
     @validate_call
-    def v1_auth_login_post_without_preload_content(
+    def login_user_without_preload_content(
         self,
-        v1_auth_register_post_request: V1AuthRegisterPostRequest,
+        register_user_request: RegisterUserRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -192,8 +192,8 @@ class AuthApi:
         """Login
 
 
-        :param v1_auth_register_post_request: (required)
-        :type v1_auth_register_post_request: V1AuthRegisterPostRequest
+        :param register_user_request: (required)
+        :type register_user_request: RegisterUserRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -216,8 +216,8 @@ class AuthApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_auth_login_post_serialize(
-            v1_auth_register_post_request=v1_auth_register_post_request,
+        _param = self._login_user_serialize(
+            register_user_request=register_user_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -225,7 +225,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "V1AuthRegisterPost201Response",
+            '200': "RegisterUser201Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -234,9 +234,9 @@ class AuthApi:
         return response_data.response
 
 
-    def _v1_auth_login_post_serialize(
+    def _login_user_serialize(
         self,
-        v1_auth_register_post_request,
+        register_user_request,
         _request_auth,
         _content_type,
         _headers,
@@ -262,8 +262,8 @@ class AuthApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if v1_auth_register_post_request is not None:
-            _body_params = v1_auth_register_post_request
+        if register_user_request is not None:
+            _body_params = register_user_request
 
 
         # set the HTTP header `Accept`
@@ -311,9 +311,9 @@ class AuthApi:
 
 
     @validate_call
-    def v1_auth_register_post(
+    def register_user(
         self,
-        v1_auth_register_post_request: V1AuthRegisterPostRequest,
+        register_user_request: RegisterUserRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -326,12 +326,12 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> V1AuthRegisterPost201Response:
+    ) -> RegisterUser201Response:
         """Register a new user
 
 
-        :param v1_auth_register_post_request: (required)
-        :type v1_auth_register_post_request: V1AuthRegisterPostRequest
+        :param register_user_request: (required)
+        :type register_user_request: RegisterUserRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -354,8 +354,8 @@ class AuthApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_auth_register_post_serialize(
-            v1_auth_register_post_request=v1_auth_register_post_request,
+        _param = self._register_user_serialize(
+            register_user_request=register_user_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -363,7 +363,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "V1AuthRegisterPost201Response",
+            '201': "RegisterUser201Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -377,9 +377,9 @@ class AuthApi:
 
 
     @validate_call
-    def v1_auth_register_post_with_http_info(
+    def register_user_with_http_info(
         self,
-        v1_auth_register_post_request: V1AuthRegisterPostRequest,
+        register_user_request: RegisterUserRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -392,12 +392,12 @@ class AuthApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[V1AuthRegisterPost201Response]:
+    ) -> ApiResponse[RegisterUser201Response]:
         """Register a new user
 
 
-        :param v1_auth_register_post_request: (required)
-        :type v1_auth_register_post_request: V1AuthRegisterPostRequest
+        :param register_user_request: (required)
+        :type register_user_request: RegisterUserRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -420,8 +420,8 @@ class AuthApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_auth_register_post_serialize(
-            v1_auth_register_post_request=v1_auth_register_post_request,
+        _param = self._register_user_serialize(
+            register_user_request=register_user_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -429,7 +429,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "V1AuthRegisterPost201Response",
+            '201': "RegisterUser201Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -443,9 +443,9 @@ class AuthApi:
 
 
     @validate_call
-    def v1_auth_register_post_without_preload_content(
+    def register_user_without_preload_content(
         self,
-        v1_auth_register_post_request: V1AuthRegisterPostRequest,
+        register_user_request: RegisterUserRequest,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -462,8 +462,8 @@ class AuthApi:
         """Register a new user
 
 
-        :param v1_auth_register_post_request: (required)
-        :type v1_auth_register_post_request: V1AuthRegisterPostRequest
+        :param register_user_request: (required)
+        :type register_user_request: RegisterUserRequest
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -486,8 +486,8 @@ class AuthApi:
         :return: Returns the result object.
         """ # noqa: E501
 
-        _param = self._v1_auth_register_post_serialize(
-            v1_auth_register_post_request=v1_auth_register_post_request,
+        _param = self._register_user_serialize(
+            register_user_request=register_user_request,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -495,7 +495,7 @@ class AuthApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '201': "V1AuthRegisterPost201Response",
+            '201': "RegisterUser201Response",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -504,9 +504,9 @@ class AuthApi:
         return response_data.response
 
 
-    def _v1_auth_register_post_serialize(
+    def _register_user_serialize(
         self,
-        v1_auth_register_post_request,
+        register_user_request,
         _request_auth,
         _content_type,
         _headers,
@@ -532,8 +532,8 @@ class AuthApi:
         # process the header parameters
         # process the form parameters
         # process the body parameter
-        if v1_auth_register_post_request is not None:
-            _body_params = v1_auth_register_post_request
+        if register_user_request is not None:
+            _body_params = register_user_request
 
 
         # set the HTTP header `Accept`

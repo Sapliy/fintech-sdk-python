@@ -41,6 +41,13 @@ class TestPaymentsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_payment_intent(self) -> None:
+        """Test case for get_payment_intent
+
+        Get Payment Intent details
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

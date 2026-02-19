@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_execution**
-> FlowExecution get_execution(execution_id)
+> AutomationFlowExecution get_execution(execution_id)
 
 Get Execution details
 
@@ -19,7 +19,7 @@ Get Execution details
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.flow_execution import FlowExecution
+from sapliyio_fintech.generated.models.automation_flow_execution import AutomationFlowExecution
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FlowExecution**](FlowExecution.md)
+[**AutomationFlowExecution**](AutomationFlowExecution.md)
 
 ### Authorization
 

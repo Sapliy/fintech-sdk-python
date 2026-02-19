@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 
 from pydantic import StrictStr
 from typing import Any, Dict, Optional
-from sapliyio_fintech.generated.models.flow_execution import FlowExecution
+from sapliyio_fintech.generated.models.automation_flow_execution import AutomationFlowExecution
 from sapliyio_fintech.generated.models.resume_execution200_response import ResumeExecution200Response
 
 from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
@@ -56,7 +56,7 @@ class ExecutionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> FlowExecution:
+    ) -> AutomationFlowExecution:
         """Get Execution details
 
 
@@ -93,7 +93,7 @@ class ExecutionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "FlowExecution",
+            '200': "AutomationFlowExecution",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -122,7 +122,7 @@ class ExecutionsApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[FlowExecution]:
+    ) -> ApiResponse[AutomationFlowExecution]:
         """Get Execution details
 
 
@@ -159,7 +159,7 @@ class ExecutionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "FlowExecution",
+            '200': "AutomationFlowExecution",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -225,7 +225,7 @@ class ExecutionsApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "FlowExecution",
+            '200': "AutomationFlowExecution",
         }
         response_data = self.api_client.call_api(
             *_param,

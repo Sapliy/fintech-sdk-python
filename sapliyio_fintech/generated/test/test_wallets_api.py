@@ -34,15 +34,15 @@ class TestWalletsApi(unittest.TestCase):
         """
         pass
 
-    def test_v1_wallets_topup_post(self) -> None:
-        """Test case for v1_wallets_topup_post
+    def test_topup_wallet(self) -> None:
+        """Test case for topup_wallet
 
         Top up a wallet
         """
         pass
 
-    def test_v1_wallets_transfer_post(self) -> None:
-        """Test case for v1_wallets_transfer_post
+    def test_transfer_wallet(self) -> None:
+        """Test case for transfer_wallet
 
         Transfer between wallets
         """

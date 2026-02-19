@@ -4,13 +4,13 @@ All URIs are relative to *https://api.sapliy.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**v1_auth_login_post**](AuthApi.md#v1_auth_login_post) | **POST** /v1/auth/login | Login
-[**v1_auth_register_post**](AuthApi.md#v1_auth_register_post) | **POST** /v1/auth/register | Register a new user
+[**login_user**](AuthApi.md#login_user) | **POST** /v1/auth/login | Login
+[**register_user**](AuthApi.md#register_user) | **POST** /v1/auth/register | Register a new user
 [**validate_key**](AuthApi.md#validate_key) | **POST** /v1/auth/validate | Validate an API key
 
 
-# **v1_auth_login_post**
-> V1AuthRegisterPost201Response v1_auth_login_post(v1_auth_register_post_request)
+# **login_user**
+> RegisterUser201Response login_user(register_user_request)
 
 Login
 
@@ -19,8 +19,8 @@ Login
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.v1_auth_register_post201_response import V1AuthRegisterPost201Response
-from sapliyio_fintech.generated.models.v1_auth_register_post_request import V1AuthRegisterPostRequest
+from sapliyio_fintech.generated.models.register_user201_response import RegisterUser201Response
+from sapliyio_fintech.generated.models.register_user_request import RegisterUserRequest
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -35,15 +35,15 @@ configuration = sapliyio_fintech.generated.Configuration(
 with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sapliyio_fintech.generated.AuthApi(api_client)
-    v1_auth_register_post_request = sapliyio_fintech.generated.V1AuthRegisterPostRequest() # V1AuthRegisterPostRequest | 
+    register_user_request = sapliyio_fintech.generated.RegisterUserRequest() # RegisterUserRequest | 
 
     try:
         # Login
-        api_response = api_instance.v1_auth_login_post(v1_auth_register_post_request)
-        print("The response of AuthApi->v1_auth_login_post:\n")
+        api_response = api_instance.login_user(register_user_request)
+        print("The response of AuthApi->login_user:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AuthApi->v1_auth_login_post: %s\n" % e)
+        print("Exception when calling AuthApi->login_user: %s\n" % e)
 ```
 
 
@@ -53,11 +53,11 @@ with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1_auth_register_post_request** | [**V1AuthRegisterPostRequest**](V1AuthRegisterPostRequest.md)|  | 
+ **register_user_request** | [**RegisterUserRequest**](RegisterUserRequest.md)|  | 
 
 ### Return type
 
-[**V1AuthRegisterPost201Response**](V1AuthRegisterPost201Response.md)
+[**RegisterUser201Response**](RegisterUser201Response.md)
 
 ### Authorization
 
@@ -76,8 +76,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **v1_auth_register_post**
-> V1AuthRegisterPost201Response v1_auth_register_post(v1_auth_register_post_request)
+# **register_user**
+> RegisterUser201Response register_user(register_user_request)
 
 Register a new user
 
@@ -86,8 +86,8 @@ Register a new user
 
 ```python
 import sapliyio_fintech.generated
-from sapliyio_fintech.generated.models.v1_auth_register_post201_response import V1AuthRegisterPost201Response
-from sapliyio_fintech.generated.models.v1_auth_register_post_request import V1AuthRegisterPostRequest
+from sapliyio_fintech.generated.models.register_user201_response import RegisterUser201Response
+from sapliyio_fintech.generated.models.register_user_request import RegisterUserRequest
 from sapliyio_fintech.generated.rest import ApiException
 from pprint import pprint
 
@@ -102,15 +102,15 @@ configuration = sapliyio_fintech.generated.Configuration(
 with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sapliyio_fintech.generated.AuthApi(api_client)
-    v1_auth_register_post_request = sapliyio_fintech.generated.V1AuthRegisterPostRequest() # V1AuthRegisterPostRequest | 
+    register_user_request = sapliyio_fintech.generated.RegisterUserRequest() # RegisterUserRequest | 
 
     try:
         # Register a new user
-        api_response = api_instance.v1_auth_register_post(v1_auth_register_post_request)
-        print("The response of AuthApi->v1_auth_register_post:\n")
+        api_response = api_instance.register_user(register_user_request)
+        print("The response of AuthApi->register_user:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling AuthApi->v1_auth_register_post: %s\n" % e)
+        print("Exception when calling AuthApi->register_user: %s\n" % e)
 ```
 
 
@@ -120,11 +120,11 @@ with sapliyio_fintech.generated.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **v1_auth_register_post_request** | [**V1AuthRegisterPostRequest**](V1AuthRegisterPostRequest.md)|  | 
+ **register_user_request** | [**RegisterUserRequest**](RegisterUserRequest.md)|  | 
 
 ### Return type
 
-[**V1AuthRegisterPost201Response**](V1AuthRegisterPost201Response.md)
+[**RegisterUser201Response**](RegisterUser201Response.md)
 
 ### Authorization
 
