@@ -1,40 +1,41 @@
-from sapliyio_fintech import SapliyClient
+from sapliyio_fintech import SapliyClient, CreatePaymentIntentRequest, ConfirmPaymentIntentRequest, EmitEventRequest
 
 def run_example():
     client = SapliyClient(api_key="sk_test_123", base_url="http://localhost:8080")
+    zone_id = "zone_main_123"
 
     try:
         print("--- Payments Example ---")
-        payment = client.payments.payment_service_create_payment_intent(
-            body={
-                "amount": "2500",  # $25.00
-                "currency": "USD",
-                "description": "Example Payment for Python SDK"
-            }
+        # Python SDK uses snake_case method names
+        payment = client.payments.create_payment_intent(
+            x_zone_id=zone_id,
+            create_payment_intent_request=CreatePaymentIntentRequest(
+                amount=2500,  # $25.00
+                currency="USD",
+                description="Example Payment for Python SDK"
+            )
         )
-        print(f"Created Payment Intent: {payment.id}")
+        print(f"Created Payment Intent: {payment.id}, Status: {payment.status}")
 
-        client.payments.payment_service_confirm_payment_intent(
+        client.payments.confirm_payment_intent(
             id=payment.id,
-            body={"paymentMethodId": "pm_card_mastercard"}
+            x_zone_id=zone_id,
+            confirm_payment_intent_request=ConfirmPaymentIntentRequest(
+                payment_method_id="pm_card_mastercard"
+            )
         )
         print("Confirmed Payment Intent!")
 
-        print("\n--- Billing Example ---")
-        subscription = client.billing.billing_service_create_subscription(
-            body={
-                "userId": "user_456",
-                "orgId": "org_789",
-                "planId": "plan_premium"
-            }
-        )
-        print(f"Created Subscription: {subscription.id}, Status: {subscription.status}")
-
         print("\n--- Wallets Example ---")
-        wallet = client.wallets.wallet_service_create_wallet(
-            body={"userId": "user_456", "currency": "USD"}
-        )
-        print(f"Created Wallet: {wallet.id}")
+        wallet = client.wallets.get_wallet(user_id="user_456", x_zone_id=zone_id)
+        print(f"Wallet Balance: {wallet.balance} {wallet.currency}")
+
+        print("\n--- Events Example ---")
+        event = client.emit_event(EmitEventRequest(
+            type="user.login",
+            data={"user_id": "user_456", "ip": "1.1.1.1"}
+        ))
+        print(f"Emitted Event ID: {event.event_id}")
 
     except Exception as e:
         print(f"Error: {e}")
