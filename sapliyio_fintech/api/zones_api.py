@@ -19,12 +19,12 @@ from typing_extensions import Annotated
 
 from pydantic import StrictStr
 from typing import List, Optional
-from sapliyio_fintech.generated.models.create_zone_request import CreateZoneRequest
-from sapliyio_fintech.generated.models.list_zones200_response_inner import ListZones200ResponseInner
+from sapliyio_fintech.models.create_zone_request import CreateZoneRequest
+from sapliyio_fintech.models.list_zones200_response_inner import ListZones200ResponseInner
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class ZonesApi:

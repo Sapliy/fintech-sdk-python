@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
-from sapliyio_fintech.generated.models.automation_flow import AutomationFlow
+from sapliyio_fintech.models.automation_flow import AutomationFlow
 from typing import Optional, Set
 from typing_extensions import Self
 

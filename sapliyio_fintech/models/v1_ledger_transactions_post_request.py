@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from sapliyio_fintech.generated.models.ledger_entry import LedgerEntry
+from sapliyio_fintech.models.ledger_entry import LedgerEntry
 from typing import Optional, Set
 from typing_extensions import Self
 

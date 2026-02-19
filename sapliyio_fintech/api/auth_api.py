@@ -17,14 +17,14 @@ from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
 from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
-from sapliyio_fintech.generated.models.register_user201_response import RegisterUser201Response
-from sapliyio_fintech.generated.models.register_user_request import RegisterUserRequest
-from sapliyio_fintech.generated.models.validate_key200_response import ValidateKey200Response
-from sapliyio_fintech.generated.models.validate_key_request import ValidateKeyRequest
+from sapliyio_fintech.models.register_user201_response import RegisterUser201Response
+from sapliyio_fintech.models.register_user_request import RegisterUserRequest
+from sapliyio_fintech.models.validate_key200_response import ValidateKey200Response
+from sapliyio_fintech.models.validate_key_request import ValidateKeyRequest
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class AuthApi:

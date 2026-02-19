@@ -19,12 +19,12 @@ from typing_extensions import Annotated
 
 from pydantic import StrictStr
 from typing import Any, Dict, Optional
-from sapliyio_fintech.generated.models.automation_flow_execution import AutomationFlowExecution
-from sapliyio_fintech.generated.models.resume_execution200_response import ResumeExecution200Response
+from sapliyio_fintech.models.automation_flow_execution import AutomationFlowExecution
+from sapliyio_fintech.models.resume_execution200_response import ResumeExecution200Response
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class ExecutionsApi:

@@ -19,15 +19,15 @@ from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
 from typing import Optional
-from sapliyio_fintech.generated.models.emit_event202_response import EmitEvent202Response
-from sapliyio_fintech.generated.models.emit_event_request import EmitEventRequest
-from sapliyio_fintech.generated.models.get_past_events200_response import GetPastEvents200Response
-from sapliyio_fintech.generated.models.replay_event200_response import ReplayEvent200Response
-from sapliyio_fintech.generated.models.replay_event_request import ReplayEventRequest
+from sapliyio_fintech.models.emit_event202_response import EmitEvent202Response
+from sapliyio_fintech.models.emit_event_request import EmitEventRequest
+from sapliyio_fintech.models.get_past_events200_response import GetPastEvents200Response
+from sapliyio_fintech.models.replay_event200_response import ReplayEvent200Response
+from sapliyio_fintech.models.replay_event_request import ReplayEventRequest
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class EventsApi:

@@ -18,12 +18,12 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 from typing_extensions import Annotated
 
 from pydantic import StrictStr
-from sapliyio_fintech.generated.models.billing_subscription import BillingSubscription
-from sapliyio_fintech.generated.models.create_subscription_request import CreateSubscriptionRequest
+from sapliyio_fintech.models.billing_subscription import BillingSubscription
+from sapliyio_fintech.models.create_subscription_request import CreateSubscriptionRequest
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class BillingApi:

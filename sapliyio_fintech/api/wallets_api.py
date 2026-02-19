@@ -20,14 +20,14 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from sapliyio_fintech.generated.models.topup_wallet200_response import TopupWallet200Response
-from sapliyio_fintech.generated.models.topup_wallet_request import TopupWalletRequest
-from sapliyio_fintech.generated.models.transfer_wallet_request import TransferWalletRequest
-from sapliyio_fintech.generated.models.wallet import Wallet
+from sapliyio_fintech.models.topup_wallet200_response import TopupWallet200Response
+from sapliyio_fintech.models.topup_wallet_request import TopupWalletRequest
+from sapliyio_fintech.models.transfer_wallet_request import TransferWalletRequest
+from sapliyio_fintech.models.wallet import Wallet
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class WalletsApi:

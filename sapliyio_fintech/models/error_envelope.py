@@ -20,7 +20,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict
 from typing import Any, ClassVar, Dict, List, Optional
-from sapliyio_fintech.generated.models.error_envelope_error import ErrorEnvelopeError
+from sapliyio_fintech.models.error_envelope_error import ErrorEnvelopeError
 from typing import Optional, Set
 from typing_extensions import Self
 

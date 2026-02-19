@@ -21,9 +21,9 @@ import json
 from datetime import datetime
 from pydantic import BaseModel, ConfigDict, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from sapliyio_fintech.generated.models.automation_flow_edge import AutomationFlowEdge
-from sapliyio_fintech.generated.models.automation_flow_node import AutomationFlowNode
-from sapliyio_fintech.generated.models.automation_flow_trigger import AutomationFlowTrigger
+from sapliyio_fintech.models.automation_flow_edge import AutomationFlowEdge
+from sapliyio_fintech.models.automation_flow_node import AutomationFlowNode
+from sapliyio_fintech.models.automation_flow_trigger import AutomationFlowTrigger
 from typing import Optional, Set
 from typing_extensions import Self
 

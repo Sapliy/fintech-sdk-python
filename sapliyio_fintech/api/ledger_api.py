@@ -19,15 +19,15 @@ from typing_extensions import Annotated
 
 from pydantic import Field, StrictStr
 from typing_extensions import Annotated
-from sapliyio_fintech.generated.models.ledger_account import LedgerAccount
-from sapliyio_fintech.generated.models.ledger_transaction import LedgerTransaction
-from sapliyio_fintech.generated.models.v1_ledger_accounts_post_request import V1LedgerAccountsPostRequest
-from sapliyio_fintech.generated.models.v1_ledger_transactions_post201_response import V1LedgerTransactionsPost201Response
-from sapliyio_fintech.generated.models.v1_ledger_transactions_post_request import V1LedgerTransactionsPostRequest
+from sapliyio_fintech.models.ledger_account import LedgerAccount
+from sapliyio_fintech.models.ledger_transaction import LedgerTransaction
+from sapliyio_fintech.models.v1_ledger_accounts_post_request import V1LedgerAccountsPostRequest
+from sapliyio_fintech.models.v1_ledger_transactions_post201_response import V1LedgerTransactionsPost201Response
+from sapliyio_fintech.models.v1_ledger_transactions_post_request import V1LedgerTransactionsPostRequest
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class LedgerApi:

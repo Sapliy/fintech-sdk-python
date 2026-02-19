@@ -20,13 +20,13 @@ from typing_extensions import Annotated
 from pydantic import Field, StrictStr, field_validator
 from typing import Optional
 from typing_extensions import Annotated
-from sapliyio_fintech.generated.models.confirm_payment_intent_request import ConfirmPaymentIntentRequest
-from sapliyio_fintech.generated.models.create_payment_intent_request import CreatePaymentIntentRequest
-from sapliyio_fintech.generated.models.payment_intent import PaymentIntent
+from sapliyio_fintech.models.confirm_payment_intent_request import ConfirmPaymentIntentRequest
+from sapliyio_fintech.models.create_payment_intent_request import CreatePaymentIntentRequest
+from sapliyio_fintech.models.payment_intent import PaymentIntent
 
-from sapliyio_fintech.generated.api_client import ApiClient, RequestSerialized
-from sapliyio_fintech.generated.api_response import ApiResponse
-from sapliyio_fintech.generated.rest import RESTResponseType
+from sapliyio_fintech.api_client import ApiClient, RequestSerialized
+from sapliyio_fintech.api_response import ApiResponse
+from sapliyio_fintech.rest import RESTResponseType
 
 
 class PaymentsApi:

@@ -28,11 +28,11 @@ from urllib.parse import quote
 from typing import Tuple, Optional, List, Dict, Union
 from pydantic import SecretStr
 
-from sapliyio_fintech.generated.configuration import Configuration
-from sapliyio_fintech.generated.api_response import ApiResponse, T as ApiResponseT
-import sapliyio_fintech.generated.models
-from sapliyio_fintech.generated import rest
-from sapliyio_fintech.generated.exceptions import (
+from sapliyio_fintech.configuration import Configuration
+from sapliyio_fintech.api_response import ApiResponse, T as ApiResponseT
+import sapliyio_fintech.models
+from sapliyio_fintech import rest
+from sapliyio_fintech.exceptions import (
     ApiValueError,
     ApiException,
     BadRequestException,
@@ -457,7 +457,7 @@ class ApiClient:
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(sapliyio_fintech.generated.models, klass)
+                klass = getattr(sapliyio_fintech.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)

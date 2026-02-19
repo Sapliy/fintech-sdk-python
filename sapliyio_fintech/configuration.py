@@ -181,7 +181,7 @@ class Configuration:
 
     You can programmatically set the cookie:
 
-conf = sapliyio_fintech.generated.Configuration(
+conf = sapliyio_fintech.Configuration(
     api_key={'cookieAuth': 'abc123'}
     api_key_prefix={'cookieAuth': 'JSESSIONID'}
 )
@@ -258,7 +258,7 @@ conf = sapliyio_fintech.generated.Configuration(
         self.logger = {}
         """Logging Settings
         """
-        self.logger["package_logger"] = logging.getLogger("sapliyio_fintech.generated")
+        self.logger["package_logger"] = logging.getLogger("sapliyio_fintech")
         self.logger["urllib3_logger"] = logging.getLogger("urllib3")
         self.logger_format = '%(asctime)s %(levelname)s %(message)s'
         """Log format
